@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+  <link href="./static/assets/image.png" rel="icon">
+
+  <title>Animesh</title>  
+
+<link href="./static/main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Home</a></li>
+          <li><a href="./works.html" title="">02 : Works</a></li>
+          <li><a href="./about.html" title="">03 : About me</a></li>
+          <li><a href="./contact.html" title="">04 : Contact</a></li>
+        </ul>
+          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
+            <li><a href="./work1.html" title="" class="active">001</a></li>
+            <li><a href="./work2.html" title="" class="active">002</a></li>
+            <li><a href="./work3.html" title="" class="active">003</a></li>
+            <li><a href="./work4.html" title="" class="active">004</a></li>
+            <li><a href="./work5.html" title="" class="active">005</a></li>
+            <li><a href="./work6.html" title="" class="active">006</a></li>
+          </ul>
+      </div> 
+    </div>
+  </nav>
+</header>
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="./static/assets/images/cnn2.jpg" class="img-responsive" alt="">
+        <div class="card-container">
+          <div class="text-center">
+            <p class="h2">005 : Convolution Neural Networks  </p>  
+
+          </div>
+          <br>
+          <br>
+          <p style="font-size:150%;">Dog Vs Cat Image Classification using Convolution Neural Networks<p>
+
+            <br>
+
+          <p style="font-size:120%;"> 
+<b><u>Introduction:</u> </b>
+A Convolutional Neural Network (ConvNet/CNN) is a Deep Learning algorithm which can take in an input image, assign importance (learnable weights and biases) to various aspects/objects in the image and be able to differentiate one from the other. The pre-processing required in a ConvNet is much lower as compared to other classification algorithms. While in primitive methods filters are hand-engineered, with enough training, ConvNets have the ability to learn these filters/characteristics.
+
+<br>
+<br>
+
+<b><u>Data Prepration:</u></b><br>
+1. Dataset taken from <a href="https://www.kaggle.com/c/dogs-vs-cats/data?select=test1.zip">Kaggle</a> competition dataset.<br>
+2. Dataset have 25000 Train images and 12500 Test images, but we will ignore those test images set and use only Training data with 25000 images.<br>
+3. 25000 images are seperated into 22000 Train images and 3000 Test/Validation images.<br>
+4. Images filenames are in the format <cat*.jpg> or <dog*.jpg> <br>
+
+<br>
+<br>
+
+<b><u>Model Workflow:</u></b><br>
+
+1. Import packages. <br>
+2. Load data. <br>
+3. Compile the Model. <br>
+4. Train Model. <br>
+5. Saving the resulting Model and weights in respective Folders created. <br>
+6. Plot the history of training and validation/test error. <br>
+<br>
+<br>
+<b><u>Structure of Simple Convolution Network:</u></b><br>
+
+<b>Convolution layer 1 </b><br>
+model = Sequential()<br>
+model.add(Conv2D(32, (3, 3), input_shape=(image_dim, image_dim, 3)))<br>
+model.add(Activation('relu'))<br>
+model.add(MaxPooling2D(pool_size=(2, 2)))<br>
+<b>Convolution layer 2</b><br>
+model.add(Conv2D(32, (3, 3)))<br>
+model.add(Activation('relu'))<br>
+model.add(MaxPooling2D(pool_size=(2, 2)))<br>
+<b>Convolution layer 3</b><br>
+model.add(Conv2D(64, (3, 3)))<br>
+model.add(Activation('relu'))<br>
+model.add(MaxPooling2D(pool_size=(2, 2)))<br>
+<b>Dense Layer</b><br>
+model.add(Flatten()) # this produces 1D feature vector<br>
+model.add(Dense(64))<br>
+model.add(Activation('relu'))<br>
+<b>Output layer</b><br>
+model.add(Dense(1))<br>
+model.add(Activation('sigmoid'))<br>
+<br>
+
+<b><u>Accuracy:</u></b><br>
+<br>
+Accuracy for all proposed variations in Convolution Network is given below:<br>
+
+<br>
+1. Simple Convolution Neural Network - 85%<br>
+2. Convolution Neural Network with L2 Norm - 86%<br>
+3. VGG16 Network - 96%%<br>
+4. Transfer Learning Model with Imagenet - 97%<br>
+<br>
+Note :- All the accuracies are approximate with Uncertaininty of 1%
+<br>
+<br>
+</p>
+
+
+<h3 style="font-size:150%;">Link to Github Repository:  <a href="https://github.com/Animeshrockn/Convolution-Neural-Network.git" title="" class="fa-icon"><i class="fa fa-github "></i></>
+                        </a> </h3>
+           
+
+
+          <blockquote>
+            <p>"We learn more by looking for the answer to a question and not finding it than we do from learning the answer itself."</p>
+            <small class="pull-right">Lloyd Alexander</small>
+          </blockquote>
+        </div>
+      </div>
+      <div class="col-md-8 col-md-offset-2 section-container-spacer">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <img src="./static/assets/work5/cd1.jpg"  width="350" height="240"  alt="">
+            <p><b>Convolution Network</b></p>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <img src="./static/assets/work5/model.png" class="img-responsive" alt="">
+            <p><b>CNN Model with L2 Norm</b></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="section-container-spacer text-center">
+              <h1 class="h2">Feedback or Suggestion</h1>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                 <form action="submit_form_feed" method="post" class="reveal-content">
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="form-group">
+                          <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                          <textarea name="message" class="form-control" rows="5" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default btn-lg">Send</button>
+                      </div>
+                      <div class="col-md-5 address-container">
+                        <ul class="list-unstyled">
+                          <li>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+
+            </div>
+           
+         </div>
+        </div>
+      </div>
+    </div>
+
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© CANADA | SIMON FRASER UNIVERSITY |<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<!--  Google Analytics: change UA-XXXXX-X to be your site's ID 
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script> -->
+
+ <script type="text/javascript" src="./static/main.70a66962.js"></script></body>
+
+</html>

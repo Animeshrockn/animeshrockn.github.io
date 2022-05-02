@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+  <link href="./static/assets/image.png" rel="icon">
+
+  <title>Animesh</title>  
+
+<link href="./static/main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="">01 : Home</a></li>
+          <li><a href="./works.html" title="">02 : Works</a></li>
+          <li><a href="./about.html" title="">03 : About me</a></li>
+          <li><a href="./contact.html" title="">04 : Contact</a></li>
+        </ul>
+          <ul class="nav navbar-nav navbar-right navbar-small visible-md visible-lg">
+            <li><a href="./work1.html" title="" class="active">001</a></li>
+            <li><a href="./work2.html" title="" class="active">002</a></li>
+            <li><a href="./work3.html" title="" class="active">003</a></li>
+            <li><a href="./work4.html" title="" class="active">004</a></li>
+            <li><a href="./work5.html" title="" class="active">005</a></li>
+            <li><a href="./work6.html" title="" class="active">006</a></li>
+          </ul>
+      </div> 
+    </div>
+  </nav>
+</header>
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="./static/assets/images/plane1.jpg" class="img-responsive" alt="">
+        <div class="card-container">
+          <div class="text-center">
+            <p class="h2">005 : Recurrent Neural Networks  </p>  
+
+          </div>
+          <br>
+          <br>
+          <p style="font-size:150%;">International Airlines passenger time series prediction using Recurrent Neural Networks<p>
+
+            <br>
+
+          <p style="font-size:120%;"> 
+<b><u>Three type of Recurrent Network's implemented:</u> </b><br>
+- Simple Recurrent Neural Networks<br>
+- Gated Recurrent Neural Networks<br>
+- Long Short Term Memory Networks<br>
+<br>
+<br>
+<b><u>Why Recurrent Networks ?</u></b><br>
+The Network structure of Neural network is working fine, then why do we need Recurrent neural networks?
+Answer to this question is variable size input data. For a neural network we need to build a Weight Metraix with the help of input data 
+but as we do not have a set input size, its very hard to create a weight matrix for each dataset. 
+Recurrent neural network models works on veriable input data. They are capable of taking indefinite length of input data for each dataset.
+There are three main type of Recurrnet network mentioned above, LSTM is on of the most used model nowadays. 
+<br>
+<br>
+<b><u>Dataset:</u></b><br>
+<br>
+-Dataset is taken from <a href="https://datamarket.com/data/set/22u3/international-airline-passengers-monthlytotals-
+in-thousands-jan-49-dec-60">datamarket.com</a>.<br>
+- Raw data source is available on <a href="https://raw.githubusercontent.com/jbrownlee/Datasets/master/airline-passengers.csv">Github</a>.<br>
+<br>
+<br>
+
+<b><u>Workflow:</u></b><br>
+<br>
+  - Import libraries.<br>
+  - Load dataset.<br>
+  - Create a Neural network Model with Simple Recurrent Neural Net (RNN)<br>
+    - Change the window size (1,3,15) and record the accuracy on Train and Test.<br>
+  - Create a Neural network Model with Long Short Term Memory net (LSTM)<br>
+    - Change the window size (1,3,15) and record the accuracy on Train and Test.<br>
+  - Create a Neural network Model with Gated Recurrent Neural Net (GRU)<br>
+    - Change the window size (1,3,15) and record the accuracy on Train and Test.<br>
+  - Plot accuracy plot for all the model for comparison.
+<br>
+<br>
+<b><u>Accuracy:</u></b><br>
+Root Mean Square Error for the different model's on best Window size is given below:<br>
+
+<br>
+- Train set <br>
+1. Simple Recurrent Neural Networks - 10.28%<br>
+2. Gated Recurrent Neural Networks - 9.42%<br>
+3. Long Short Term Memory Networks - 11.26%<br>
+
+<br>
+- Test set <br>
+1. Simple Recurrent Neural Networks - 20.52%<br>
+2. Gated Recurrent Neural Networks - 18.72%<br>
+3. Long Short Term Memory Networks - 20.91%<br>
+
+</p>
+
+
+<h3 style="font-size:150%;">Link to Github Repository:  <a href="https://github.com/Animeshrockn/Recurrent-Neural-Networks.git" title="" class="fa-icon"><i class="fa fa-github "></i></>
+                        </a> </h3>
+           
+
+
+          <blockquote>
+            <p>"I think it is possible for ordinary people to choose to be extraordinary."</p>
+            <small class="pull-right">Elon Musk</small>
+          </blockquote>
+        </div>
+      </div>
+      <div class="col-md-8 col-md-offset-2 section-container-spacer">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <img src="./static/assets/work6/plot.png"  class="img-responsive"  alt="">
+            <p><b>LSTM network Prediction plot (window_size = 15)</b></p>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <img src="./static/assets/work6/rnn.png" width="400" height="300" alt="">
+            <p><b>Accuracy of all 3 type of RNN's</b></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="section-container-spacer text-center">
+              <h1 class="h2">Feedback or Suggestion</h1>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                 <form action="submit_form_feed" method="post" class="reveal-content">
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="form-group">
+                          <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                          <textarea name="message" class="form-control" rows="5" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default btn-lg">Send</button>
+                      </div>
+                      <div class="col-md-5 address-container">
+                        <ul class="list-unstyled">
+                          <li>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+
+            </div>
+           
+         </div>
+        </div>
+      </div>
+    </div>
+
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© CANADA | SIMON FRASER UNIVERSITY |<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<!--  Google Analytics: change UA-XXXXX-X to be your site's ID 
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script> -->
+
+ <script type="text/javascript" src="./static/main.70a66962.js"></script></body>
+
+</html>
